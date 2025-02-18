@@ -27,4 +27,5 @@ sudo sed -i "s,^\(logfile = \).*,\1"/var/log/odoo/odoo-server.log"," /etc/odoo/o
 #Creamos el archivo de inicio del servicio de Odoo:
 sudo cp /opt/odoo/odoo/debian/init /etc/init.d/odoo && sudo chmod +x /etc/init.d/odoo
 sudo ln -s /opt/odoo/odoo/odoo-bin /usr/bin/odoo
-sudo update-rc.d -f odoo start 2
+sudo update-rc.d -f odoo start 20 2 3 4 5 .
+sudo service odoo start
